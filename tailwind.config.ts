@@ -8,11 +8,38 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      fontFamily: {
+        sans: ["var(--font-poppins)"],
       },
+    },
+    colors: {
+      BtnHireMe: {
+        BackGroundHireMe: "#1f2235",
+        HoverBorderHireMe: "#ff5823",
+      },
+      BtnGetCV: {
+        BackGroundGetCV: "#ff5823",
+        HoverBorderGetCV: "#1f2235",
+      },
+    },
+    textColor: {
+      TextHireMe: "white",
+      HoverTextHireMe: "aliceblue",
+      HeroSection: {
+        ProfileParent: {
+          Color: "aliceblue",
+        },
+        HightlightText: {
+          Color: "#ff5823",
+        },
+      },
+    },
+    backgroundImage: {
+      HeroSection: "url('/bg-web.jpg')",
+      HeroProfile: "url('/bg-4.jpg')",
+    },
+    boxShadow: {
+      ProfilePicture: "0 1px 0px 0px rgb(255,255,255)",
     },
   },
   plugins: [],
