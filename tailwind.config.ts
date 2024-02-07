@@ -7,6 +7,22 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    screens: {
+      '2xl': {'max': '1535px'},
+      // => @media (max-width: 1535px) { ... }
+
+      'xl': {'max': '1279px'},
+      // => @media (max-width: 1279px) { ... }
+
+      'lg': {'max': '1023px'},
+      // => @media (max-width: 1023px) { ... }
+
+      'md': {'max': '767px'},
+      // => @media (max-width: 767px) { ... }
+
+      'sm': {'max': '639px'},
+      // => @media (max-width: 639px) { ... }
+    },
     extend: {
       fontFamily: {
         sans: ["var(--font-poppins)"],
@@ -35,7 +51,7 @@ const config: Config = {
       },
     },
     backgroundImage: {
-      HeroSection: "url('/bg-web.jpg')",
+      HeroSection: "url('/backgroundhero.png')",
       HeroProfile: "url('/bg-4.jpg')",
     },
     boxShadow: {
