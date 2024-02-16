@@ -8,66 +8,106 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import Link from "next/link";
 import Typical from "react-typical";
-import Image from "next/image";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
+import stylesNav from "./styles/header.module.scss";
+import StyleProfile from "./components/Home/Home.module.scss";
 export default function Home() {
   return (
     <>
-      <div className="flex min-h-[670px] flex-col justify-between bg-HeroSection bg-cover bg-center">
-        <div className="z-0 flex min-h-fit items-center justify-center text-center font-sans">
-          <div className="flex items-center text-HeroSection-ProfileParent-Color">
+      <div className={`${StyleProfile.Home__Container} ${StyleProfile.robotoregular}`}>
+        <div>
+          <div className={stylesNav.header__container}>
+            <div className={stylesNav.header__parent}>
+              <div className={stylesNav.header__hamburger}>
+                <FontAwesomeIcon
+                  className={`${stylesNav.header__hamburgerBars} ${stylesNav.header__showhamburger}`}
+                  icon={faBars}
+                />
+              </div>
+              <div className={stylesNav.header__logo}>
+                <span>MT</span>
+              </div>
+              {/* show-hamburger-options */}
+              <div className={stylesNav.header__options}>
+                <Link
+                  href={"/home"}
+                  className={`${stylesNav.header__optionSeperator} ${stylesNav.header__optionSeperatorActive}`}
+                >
+                  Home
+                </Link>
+                <Link
+                  href={"/home"}
+                  className={`${stylesNav.header__optionSeperator} `}
+                >
+                  About
+                </Link>
+                <Link
+                  href={"/home"}
+                  className={`${stylesNav.header__optionSeperator} `}
+                >
+                  About
+                </Link>
+                <Link
+                  href={"/home"}
+                  className={`${stylesNav.header__optionSeperator} `}
+                >
+                  About
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          className={`${StyleProfile.Home__ProfileContainer} ${StyleProfile.robotoregular}`}
+        >
+          <div className={`${StyleProfile.Home__ProfileParent}`}>
             <div>
               <div className="">
                 <div className="">
-                  <Link
-                    href="https://www.facebook.com/lmtafred918/"
-                    className="color-white p-[8px] pl-0"
-                  >
+                  <Link href="https://www.facebook.com/lmtafred918/">
                     <FontAwesomeIcon
                       icon={faFacebookSquare}
-                      className="hover:scale-150"
+                      className={`${StyleProfile.Home__ProfileLink}`}
                     />
                   </Link>
-                  <Link href="" className="color-white p-[8px] pl-0 ">
+                  <Link href="">
                     <FontAwesomeIcon
                       icon={faGoogle}
-                      className="hover:scale-150"
+                      className={`${StyleProfile.Home__ProfileLink}`}
                     />
                   </Link>
-                  <Link
-                    href="https://github.com/begasic2001"
-                    className="color-white p-[8px] pl-0 "
-                  >
+                  <Link href="https://github.com/begasic2001">
                     <FontAwesomeIcon
                       icon={faGithubSquare}
-                      className="hover:scale-150"
+                      className={`${StyleProfile.Home__ProfileLink}`}
                     />
                   </Link>
-                  <Link
-                    href="https://www.linkedin.com/in/l%C6%B0%C6%A1ng-minh-th%C3%A0nh-a6880a208/"
-                    className="color-white p-[8px] pl-0 "
-                  >
+                  <Link href="https://www.linkedin.com/in/l%C6%B0%C6%A1ng-minh-th%C3%A0nh-a6880a208/">
                     <FontAwesomeIcon
                       icon={faLinkedinIn}
-                      className="hover:scale-150"
+                      className={`${StyleProfile.Home__ProfileLink}`}
                     />
                   </Link>
                 </div>
               </div>
 
-              <div className="text-[24px] lg:text-[20px]">
-                <span className="text-[40px]">
+              <div className={`${StyleProfile.Home__ProfileDetailsName}`}>
+                <span className={`${StyleProfile.Home__ProfilePrimaryText}`}>
                   {" "}
                   Hello, I'm{" "}
-                  <span className="font-medium text-HeroSection-HightlightText-Color">
+                  <span
+                    className={`${StyleProfile.Home__ProfileHighlightText}`}
+                  >
                     Thanh
                   </span>
                 </span>
               </div>
 
-              <div className="mb-[24px] ml-0 mr-0 mt-[14px] flex flex-col">
-                <span className="text-TextHireMe lg:text-[12px]">
+              <div className={`${StyleProfile.Home__ProfileDetailRole}`}>
+                <span className={`${StyleProfile.Home__ProfilePrimaryText}`}>
                   {" "}
-                  <h1 className="text-[40px]">
+                  <h1>
                     {" "}
                     <Typical
                       loop={Infinity}
@@ -83,18 +123,15 @@ export default function Home() {
                       ]}
                     />
                   </h1>
-                  <span className="mt-[5px] text-[19px] font-light">
+                  <span className={`${StyleProfile.Home__ProfileRoleTagline}`}>
                     Lorem ipsum dolor, sit amet c aliquam incidunt vero
                     repellendus expedita illum voluptate.
                   </span>
                 </span>
               </div>
 
-              <div className="profile-options">
-                <button
-                  className="z-[700] w-[160px] rounded-[50px] border-2 border-solid bg-BtnHireMe-BackGroundHireMe py-[14px] text-[14px] 
-             text-TextHireMe hover:border-2 hover:border-BtnHireMe-HoverBorderHireMe hover:text-HoverTextHireMe lg:w-[120px] lg:px-[11px] lg:py-0 "
-                >
+              <div className="profile-optins">
+                <button className={`${StyleProfile.Home__ProfileBtnPrimary}`}>
                   {""}
                   Hire Me{" "}
                 </button>
@@ -102,26 +139,26 @@ export default function Home() {
                   href="CV_LuongMinhThanh_WebDeveloper.pdf"
                   download={"CV_LuongMinhThanh_WebDeveloper.pdf"}
                 >
-                  <button className="ml-[28px] w-[160px] rounded-[50px] bg-BtnGetCV-BackGroundGetCV py-[14px] text-[14px] font-bold text-TextHireMe hover:ml-[28px] hover:bg-[cornsilk] hover:text-[#111]">
+                  <button
+                    className={`${StyleProfile.Home__ProfileBtnSecondary}`}
+                  >
                     Get CV
                   </button>
                 </a>
               </div>
             </div>
 
-            <div className="ml-[100px] flex h-[380px] w-[380px] items-center justify-center rounded-[50%] shadow-ProfilePicture lg:mx-0 lg:ml-[80px] lg:mr-0">
-              <div className="z-10 h-[92%] w-[92%] rounded-[50%] bg-HeroProfile bg-cover bg-center bg-no-repeat hover:scale-[1.07] hover:duration-1000 hover:ease-out"></div>
+            <div className={`${StyleProfile.Home__ProfileAvatar}`}>
+              <div
+                className={`${StyleProfile.Home__ProfileAvatar__Main}`}
+              ></div>
             </div>
           </div>
         </div>
 
-        <div className="flex h-[17.8%] w-full justify-center overflow-hidden">
-          <div className="h-full max-h-[1920px] w-full">
-            <img
-              src="/wavefooterhero.png"
-              alt=""
-              className="h-[130px] w-full max-w-full bg-cover"
-            />
+        <div className={`${StyleProfile.Home__FooterContainer}`}>
+          <div className={`${StyleProfile.Home__FooterParent}`}>
+            <img src="/wavefooterhero.png" alt="" />
           </div>
         </div>
       </div>

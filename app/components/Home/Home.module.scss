@@ -1,0 +1,155 @@
+.Home {
+  &__Container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 670px;
+    background-image: url("/backgroundhero.png");
+    background-size: cover;
+    background-position: center;
+  }
+  &__ProfileContainer {
+    display: flex;
+    min-height: fit-content;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 0;
+  }
+  &__ProfileParent {
+    display: flex;
+    align-items: center;
+    color: aliceblue;
+  }
+  &__ProfileLink {
+    color: white;
+    padding: 8px 8px 8px 0;
+    transition: all 0.75s ease-out;
+  }
+
+  &__ProfileLink:hover {
+    transform: scale(1.5);
+  }
+  &__ProfileDetailsName {
+    font-size: 24px;
+  }
+  &__ProfilePrimaryText {
+    font-size: 40px;
+    color: white;
+  }
+
+  &__ProfileHighlightText {
+    font-weight: 500;
+    color: #ff5823;
+  }
+  &__ProfileDetailRole {
+    display: flex;
+    flex-direction: column;
+    margin: 14px 0 24px 0;
+  }
+
+  &__ProfileRoleTagline {
+    margin-top: 5px;
+    font-size: 19px;
+    font-weight: 300;
+  }
+
+  &__ProfileBtnPrimary {
+    z-index: 700;
+    width: 160px;
+    border-radius: 50px;
+    border-width: 2px;
+    border-style: solid;
+    padding: 14px 0;
+    font-size: 14px;
+    background-color: #1f2235;
+    color: white;
+  }
+
+  &__ProfileBtnPrimary:hover {
+    border-width: 2px;
+    border-color: #ff5823;
+    color: aliceblue;
+  }
+
+  &__ProfileBtnSecondary {
+    margin-left: 28px;
+    width: 160px;
+    border-radius: 50px;
+    background-color: #ff5823;
+    padding: 14px 0;
+    font-size: 14px;
+    font-weight: 700;
+    color: white;
+  }
+
+  &__ProfileBtnSecondary:hover {
+    margin-left: 28px;
+    background-color: cornsilk;
+    color: #111;
+  }
+
+  &__ProfileAvatar {
+    margin: 0 0 0 100px;
+    display: flex;
+    height: 380px;
+    width: 380px;
+    align-self: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0px 1px 0px 0px rgb(255, 255, 255);
+
+    &__Main {
+      height: 95%;
+      width: 95%;
+      border-radius: 50%;
+      background-image: url("/bg-4.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    &__Main:hover {
+      transform: scale(1.07);
+      transition: all 1s ease-out;
+    }
+  }
+
+  &__Footer {
+    &Container {
+      height: 17.8%;
+      width: 100%;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+    }
+
+    &Parent {
+      width: 100%;
+      height: 100%;
+      max-width: 1920px;
+    }
+
+    &Parent img {
+      width: 100%;
+      max-width: 100%;
+      height: 130px;
+      background-size: cover;
+    }
+  }
+}
+
+.robotoregular {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@media only screen and (max-width: 1023px) {
+  .Home {
+    &__ProfileBtnPrimary {
+      width: 120px;
+      padding: 0 11px;
+    }
+  }
+}
