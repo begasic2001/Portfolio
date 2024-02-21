@@ -1,3 +1,5 @@
+
+
 .Home {
   &__ProfileContainer {
     display: flex;
@@ -141,6 +143,13 @@
     &__ProfileBtnPrimary {
       width: 120px;
       padding: 0 11px;
+    }
+
+    &__Footer {
+      &Parent img {
+        display: flex;
+        align-items: flex-end;
+      }
     }
   }
 }

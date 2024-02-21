@@ -44,16 +44,12 @@ $SecondColor: #ff5823;
   }
 }
 
+
 @media only screen and (max-width: 1110px) {
   .header {
     &__parent {
       width: 80%;
     }
-  }
-}
-
-@media only screen and (max-width: 1110px) {
-  .header {
     &__hamburger {
       display: block;
     }
