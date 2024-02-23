@@ -1,3 +1,59 @@
-.HeadingContainer{
-  
+.About {
+  &__Container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 50px 0 0 0;
+  }
+
+  &__Parents {
+    max-width: 1000px;
+    width: 70%;
+  }
+
+  &__Card {
+    display: flex;
+    width: 100%;
+    box-shadow: 0 0px 20px -2px #1f2235;
+    &Profile {
+      width: 50%;
+      background: url("/bg-4.jpg") no-repeat center;
+      background-size: cover;
+    }
+    &Details {
+      width: 48%;
+      text-align: justify;
+      padding: 30px;
+    }
+    &Description {
+      font-size: 16px;
+    }
+    &Highlights {
+      margin: 80px 0;
+      &Heading {
+        font-family: "Roboto bold";
+        font-weight: bold;
+        font-style: normal;
+        font-size: 24px;
+        margin: 0 0 5px 0;
+      }
+    }
+    &Options{
+      margin: 0 0 0 30px;
+    }
+  }
+}
+
+.Highlight {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+  font-size: 16px;
+  &__Blob {
+    height: 12px;
+    width: 12px;
+    margin: 0 10px 0 0;
+    background-color: #ff5823;
+  }
 }

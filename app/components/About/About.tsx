@@ -27,7 +27,6 @@ const renderHighlight = () => {
 };
 
 const About = () => {
-  // {`${AboutStyles.About__Container} ${AboutStyles.About__ScreenContainer} {`${AboutStyles.About__Parents}`}
   return (
     <div
       className={`${AboutStyles.About__Container} ${AboutStyles.About__ScreenContainer}`}
@@ -35,18 +34,18 @@ const About = () => {
       <div className={`${AboutStyles.About__Parents}`}>
         <ScreenHeading title="About Me" subHeading="Why Choose Me?" />
         <div className={`${AboutStyles.About__Card}`}>
-          <div className={`${AboutStyles.About__Profile}`}></div>
-          <div className={`${AboutStyles.About__Details}`}>
-            <span className={`${AboutStyles.About__Description}`}>
+          <div className={`${AboutStyles.About__CardProfile}`}></div>
+          <div className={`${AboutStyles.About__CardDetails}`}>
+            <span className={`${AboutStyles.About__CardDescription}`}>
               {SCREEN_ABOUT.description}
             </span>
-            <div className={`${AboutStyles.About__Highlights}`}>
-              <div className={`${AboutStyles.About__HighlightHeading}`}>
+            <div className={`${AboutStyles.About__CardHighlights}`}>
+              <div className={`${AboutStyles.About__CardHighlightsHeading}`}>
                 <span>{SCREEN_ABOUT.hightlights.heading}</span>
               </div>
               {renderHighlight()}
             </div>
-            <div className={`${AboutStyles.About__Options}`}>
+            <div className={`${AboutStyles.About__CardOptions}`}>
               {/* <button className={`${StyleProfile.Home__ProfileBtnPrimary}`}>
                 {""}
                 Hire Me{" "}
