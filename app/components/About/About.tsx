@@ -46,7 +46,7 @@ const About = () => {
               {renderHighlight()}
             </div>
             <div className={`${AboutStyles.About__CardOptions}`}>
-              {/* <button className={`${StyleProfile.Home__ProfileBtnPrimary}`}>
+              <button className={`${AboutStyles.About__CardOptionsBtnHireMe}`}>
                 {""}
                 Hire Me{" "}
               </button>
@@ -54,10 +54,10 @@ const About = () => {
                 href="CV_LuongMinhThanh_WebDeveloper.pdf"
                 download={"CV_LuongMinhThanh_WebDeveloper.pdf"}
               >
-                <button className={`${StyleProfile.Home__ProfileBtnSecondary}`}>
+                <button className={`${AboutStyles.About__CardOptionsBtnGetCV}`}>
                   Get CV
                 </button>
-              </a> */}
+              </a>
             </div>
           </div>
         </div>

@@ -1,3 +1,43 @@
+@mixin BtnBlack {
+  z-index: 700;
+  width: 160px;
+  border-radius: 50px;
+  border-width: 2px;
+  border-style: solid;
+  padding: 14px 0;
+  font-size: 14px;
+  background-color: #1f2235;
+  color: white;
+}
+
+@mixin BtnDarkOrange {
+  margin: 0 0 0 30px;
+  width: 160px;
+  border-radius: 50px;
+  background-color: #ff5823;
+  padding: 14px 0;
+  font-size: 14px;
+  font-weight: 700;
+  color: white;
+}
+/*Tablet And Ipad Responsive*/
+@mixin tablet {
+  @media (max-width: 1110px) {
+    @content;
+  }
+}
+
+@mixin ipad {
+  @media (max-width: 898px) {
+    @content;
+  }
+}
+
+@mixin phone__466 {
+  @media (max-width: 466px) {
+    @content;
+  }
+}
 .About {
   &__Container {
     display: flex;
@@ -10,6 +50,9 @@
   &__Parents {
     max-width: 1000px;
     width: 70%;
+    @include tablet {
+      width: 88%;
+    }
   }
 
   &__Card {
@@ -20,11 +63,17 @@
       width: 50%;
       background: url("/bg-4.jpg") no-repeat center;
       background-size: cover;
+      @include ipad {
+        display: none;
+      }
     }
     &Details {
       width: 48%;
       text-align: justify;
       padding: 30px;
+      @include ipad {
+        width: 100%;
+      }
     }
     &Description {
       font-size: 16px;
@@ -39,8 +88,28 @@
         margin: 0 0 5px 0;
       }
     }
-    &Options{
+    &Options {
       margin: 0 0 0 30px;
+      @include phone__466 {
+        display: flex;
+        flex-direction: column;
+        margin: 24px 0 0 0;
+      }
+      &BtnHireMe {
+        margin: 0 0 0 30px;
+        @include BtnBlack;
+        @include phone__466 {
+          margin: 24px 0 0 0;
+          width: 100%;
+        }
+      }
+      &BtnGetCV {
+        @include BtnDarkOrange;
+        @include phone__466 {
+          margin: 24px 0 0 0;
+          width: 100%;
+        }
+      }
     }
   }
 }
