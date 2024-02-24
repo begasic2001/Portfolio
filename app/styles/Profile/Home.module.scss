@@ -1,4 +1,4 @@
-
+@import "../responsive";
 
 .Home {
   &__ProfileContainer {
@@ -13,6 +13,10 @@
     display: flex;
     align-items: center;
     color: aliceblue;
+    @include ipad_810 {
+      flex-direction: column-reverse;
+      margin: 40px 0 0 0;
+    }
   }
   &__ProfileLink {
     color: white;
@@ -25,20 +29,46 @@
   }
   &__ProfileDetailsName {
     font-size: 24px;
+    @include tablet {
+      font-size: 20px;
+      text-align: center;
+    }
+    @include phone__375 {
+      width: 85%;
+      text-align: center;
+    }
+    @include ipad_810 {
+      margin: 25px 0 0 18px;
+      text-align: center;
+    }
   }
   &__ProfilePrimaryText {
     font-size: 40px;
     color: white;
+    @include phone__375 {
+      text-align: center;
+    }
+  
   }
 
   &__ProfileHighlightText {
     font-weight: 500;
     color: #ff5823;
+    @include phone__375 {
+      text-align: center;
+    }
+   
   }
   &__ProfileDetailRole {
     display: flex;
     flex-direction: column;
     margin: 14px 0 24px 0;
+    @include tablet {
+      font-size: 12px;
+    }
+    @include ipad_810 {
+      text-align: center;
+    }
   }
 
   &__ProfileRoleTagline {
@@ -47,6 +77,14 @@
     font-weight: 300;
   }
 
+  &__ProfileOptions {
+    @include ipad_810 {
+      display: flex;
+      justify-content: space-between;
+      margin: 0;
+      text-align: center;
+    }
+  }
   &__ProfileBtnPrimary {
     z-index: 700;
     width: 160px;
@@ -57,6 +95,11 @@
     font-size: 14px;
     background-color: #1f2235;
     color: white;
+    @include tablet {
+      width: 120px;
+      padding: 11px 0;
+      z-index: 700;
+    }
   }
 
   &__ProfileBtnPrimary:hover {
@@ -74,6 +117,11 @@
     font-size: 14px;
     font-weight: 700;
     color: white;
+    @include tablet {
+      width: 120px;
+      padding: 11px 0;
+      z-index: 700;
+    }
   }
 
   &__ProfileBtnSecondary:hover {
@@ -91,7 +139,22 @@
     justify-content: center;
     border-radius: 50%;
     box-shadow: 0px 1px 0px 0px rgb(255, 255, 255);
-
+    @include tablet {
+      margin: 0 0 0 80px;
+    }
+    @include ipad_898 {
+      height: 320px;
+      width: 320px;
+      margin: 0 0 0 4px;
+    }
+    @include ipad_810 {
+      margin: 0;
+    }
+    @include phone__375 {
+      height: 275px;
+      width: 275px;
+      margin-top: -90px;
+    }
     &__Main {
       height: 95%;
       width: 95%;

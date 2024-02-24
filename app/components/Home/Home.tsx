@@ -83,7 +83,7 @@ const Home = () => {
               </span>
             </div>
 
-            <div className="profile-optins">
+            <div className={`${StyleProfile.Home__ProfileOptions}`}>
               <button className={`${StyleProfile.Home__ProfileBtnPrimary}`}>
                 {""}
                 Hire Me{" "}

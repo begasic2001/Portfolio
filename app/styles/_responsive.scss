@@ -1,0 +1,53 @@
+/*Tablet And Ipad Responsive*/
+@mixin tablet {
+  @media (max-width: 1110px) {
+    @content;
+  }
+}
+
+@mixin ipad_898 {
+  @media (max-width: 898px) {
+    @content;
+  }
+}
+
+@mixin ipad_810 {
+  @media (max-width: 810px) {
+    @content;
+  }
+}
+
+@mixin phone__466 {
+  @media (max-width: 466px) {
+    @content;
+  }
+}
+
+@mixin phone__375 {
+  @media (max-width: 375px) {
+    @content;
+  }
+}
+
+@mixin BtnBlack {
+  z-index: 700;
+  width: 160px;
+  border-radius: 50px;
+  border-width: 2px;
+  border-style: solid;
+  padding: 14px 0;
+  font-size: 14px;
+  background-color: #1f2235;
+  color: white;
+}
+
+@mixin BtnDarkOrange {
+  margin: 0 0 0 30px;
+  width: 160px;
+  border-radius: 50px;
+  background-color: #ff5823;
+  padding: 14px 0;
+  font-size: 14px;
+  font-weight: 700;
+  color: white;
+}

@@ -1,43 +1,5 @@
-@mixin BtnBlack {
-  z-index: 700;
-  width: 160px;
-  border-radius: 50px;
-  border-width: 2px;
-  border-style: solid;
-  padding: 14px 0;
-  font-size: 14px;
-  background-color: #1f2235;
-  color: white;
-}
+@import '../responsive';
 
-@mixin BtnDarkOrange {
-  margin: 0 0 0 30px;
-  width: 160px;
-  border-radius: 50px;
-  background-color: #ff5823;
-  padding: 14px 0;
-  font-size: 14px;
-  font-weight: 700;
-  color: white;
-}
-/*Tablet And Ipad Responsive*/
-@mixin tablet {
-  @media (max-width: 1110px) {
-    @content;
-  }
-}
-
-@mixin ipad {
-  @media (max-width: 898px) {
-    @content;
-  }
-}
-
-@mixin phone__466 {
-  @media (max-width: 466px) {
-    @content;
-  }
-}
 .About {
   &__Container {
     display: flex;
@@ -63,7 +25,7 @@
       width: 50%;
       background: url("/bg-4.jpg") no-repeat center;
       background-size: cover;
-      @include ipad {
+      @include ipad_898 {
         display: none;
       }
     }
@@ -71,7 +33,7 @@
       width: 48%;
       text-align: justify;
       padding: 30px;
-      @include ipad {
+      @include ipad_898 {
         width: 100%;
       }
     }
