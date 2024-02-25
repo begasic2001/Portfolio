@@ -3,6 +3,7 @@ import StyleProfileContainer from "./styles/Profile/HeadContainer.module.scss";
 import dynamic from "next/dynamic";
 import { Suspense } from "react";
 import About from "./components/About/About";
+import Resume from "./components/Resume/Resume";
 const HomeSection = dynamic(() => import("./components/Home/Home"), {
   ssr: false,
 });
@@ -27,7 +28,7 @@ export default function Home() {
       </div>
       
         <About />
-      
+        <Resume/>
     </>
   );
 }
