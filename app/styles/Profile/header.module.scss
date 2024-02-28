@@ -11,7 +11,7 @@ $SecondColor: #ff5823;
 
   &__parent {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     height: 100%;
     width: 70%;
@@ -21,6 +21,8 @@ $SecondColor: #ff5823;
   &__logo {
     color: $white;
     font-size: 50px;
+    font-family: "Roboto";
+    font-weight: 700;
   }
   &__options {
     display: flex;
@@ -46,9 +48,6 @@ $SecondColor: #ff5823;
 
 @media only screen and (max-width: 1110px) {
   .header {
-    &__parent {
-      width: 80%;
-    }
     &__hamburger {
       display: block;
     }
@@ -73,8 +72,9 @@ $SecondColor: #ff5823;
     }
 
     &__optionSeperator {
-      margin: 0 50px 0 0;
+      margin: 0;
       color: $white;
+      font-size: 24px;
     }
 
     &__optionSeperatorActive {
@@ -84,7 +84,7 @@ $SecondColor: #ff5823;
     &__hamburgerBars {
       font-size: 30px;
       cursor: pointer;
-      margin: 0px 30px;
+      margin: 0px 10px;
       color: $white;
     }
 
