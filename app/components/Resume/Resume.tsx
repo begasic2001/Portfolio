@@ -200,10 +200,14 @@ const Resume = () => {
           <div className={`${ResumeStyle.ResumeBullets}`}>
             <div className={`${ResumeStyle.ResumeBulletContainer}`}>
               <div className={`${ResumeStyle.ResumeBulletIcon}`}></div>
-              <div className={`${ResumeStyle.ResumeBulletList}`}>{getBullets()}</div>
+              <div className={`${ResumeStyle.ResumeBulletList}`}>
+                {getBullets()}
+              </div>
             </div>
           </div>
-          <div className={`${ResumeStyle.ResumeBulletDetails}`}>{getResumeScreen()}</div>
+          <div className={`${ResumeStyle.ResumeBulletDetails}`}>
+            {getResumeScreen()}
+          </div>
         </div>
       </div>
     </div>
