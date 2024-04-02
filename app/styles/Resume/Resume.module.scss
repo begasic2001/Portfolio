@@ -7,4 +7,64 @@
   margin: 120px 0;
 }
 
+.ResumeCard {
+  display: flex;
+  height: 360px;
+  width: 1000px;
+}
 
+.ResumeBullets {
+  height: 100%;
+  box-shadow: 15px 0 9px -15px #1f2235;
+  width: 320px;
+}
+
+.ResumeBulletDetails {
+  flex-grow: 1;
+  width: 700px;
+  overflow: hidden;
+  padding: 0 0 0 70px;
+}
+.ResumeScreenExperienceDescription {
+  margin: 10px 0 0 0;
+  text-align: justify;
+  max-width: 100%;
+}
+
+.ResumeDetailsCarousel {
+  transition: transform 1s ease-out;
+}
+
+.Resume {
+  &BulletContainer {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    position: relative;
+  }
+
+  &BulletList {
+    width: 80%;
+    position: relative;
+    z-index: 2;
+  }
+
+  &Bullet {
+    display: flex;
+    align-items: center;
+    background-color: #1f2235;
+    height: 40px;
+    margin: 15px 0;
+    padding: 0 8px;
+    border-radius: 20px;
+    width: 30px;
+    transition: width 0.6s ease;
+    cursor: pointer;
+    &Label {
+      margin-left: 20px;
+      font-size: 14px;
+      white-space: nowrap;
+    }
+  }
+}

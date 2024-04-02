@@ -178,6 +178,9 @@ const Resume = () => {
           alt=""
           className={`${ResumeStyle.ResumeBulletLogo}`}
         />
+        <span className={`${ResumeStyle.ResumeBulletLabel}`}>
+          {bullet.label}
+        </span>
       </div>
     ));
   };
