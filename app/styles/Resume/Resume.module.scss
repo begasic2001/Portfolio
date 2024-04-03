@@ -61,10 +61,46 @@
     width: 30px;
     transition: width 0.6s ease;
     cursor: pointer;
+
     &Label {
       margin-left: 20px;
       font-size: 14px;
       white-space: nowrap;
+      font-family: "Roboto", sans-serif;
+      font-weight: 900;
+      font-style: normal;
+    }
+    &Logo {
+      height: 16px;
+      margin: 0 5px 0 0;
+    }
+    &Icon {
+      width: 34px;
+      height: 100%;
+      z-index: 1;
+      background-color: #1f2235;
+      position: absolute;
+    }
+
+    &Selected {
+      color: white;
+      width: 100%;
     }
   }
+
+  &ScreenContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 360px;
+    width: 100%;
+  }
 }
+
+// .ResumeScreenContainer {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-evenly;
+//   height: 360px;
+//   width: 100%;
+// }
