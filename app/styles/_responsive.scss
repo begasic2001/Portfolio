@@ -5,6 +5,12 @@
   }
 }
 
+@mixin tablet_1023 {
+  @media (max-width: 1023px) {
+    @content;
+  }
+}
+
 @mixin ipad_898 {
   @media (max-width: 898px) {
     @content;

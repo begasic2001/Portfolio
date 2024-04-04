@@ -23,7 +23,7 @@ const Resume = () => {
             <span>{props.heading ? props.heading : ""}</span>
             {props.fromDate && props.toDate ? (
               <div className={`${ResumeStyle.ResumeHeadingDate}`}>
-                {`${props.fromDate} _ ${props.toDate}`}
+                {`${props.fromDate}-${props.toDate}`}
               </div>
             ) : (
               <div></div>
@@ -59,19 +59,19 @@ const Resume = () => {
 
   const projectDetails = [
     {
-      title: "",
+      title: "StudyAT",
       duration: { fromDate: "2022", toDate: "2022" },
       description: "A Personal Project",
       subHeading: "Technologies Used:",
     },
     {
-      title: "",
+      title: "Tourbooking",
       duration: { fromDate: "2022", toDate: "2022" },
       description: "A Personal Project",
       subHeading: "Technologies Used:",
     },
     {
-      title: "",
+      title: "Shopping Flower",
       duration: { fromDate: "2022", toDate: "2022" },
       description: "A Personal Project",
       subHeading: "Technologies Used:",
@@ -79,7 +79,7 @@ const Resume = () => {
   ];
 
   const resumeDetails = [
-    <div className={`${ResumeStyle.ResumeScreenContainer}`}>
+    <div className={`${ResumeStyle.ResumeScreenContainer}`} key={"Education"}>
       <ResumeHeading
         heading={"Information Technology"}
         subHeading={"Bachelor of information technology"}
@@ -119,18 +119,19 @@ const Resume = () => {
     </div>,
     <div
       className={`${ResumeStyle.ResumeScreenContainer} ${ResumeStyle.ResumeProgrammingSkillContainer}`}
-      key={"Programming__Skills"}
+      key={"Programming Skills"}
     >
       {programmingSkillsDetails.map((skill, index) => (
         <div
           className={`${ResumeStyle.ResumeProgrammingSkillContainer__SkillParent}`}
+          key={index}
         >
           <div
             className={`${ResumeStyle.ResumeProgrammingSkillContainer__SkillParentBullet}`}
           ></div>
           <span>{skill.skill}</span>
-          <div className="">
-            <div></div>
+          <div className="skill-percentage">
+            <div className="active percentage"></div>
           </div>
         </div>
       ))}
