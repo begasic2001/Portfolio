@@ -39,22 +39,28 @@ const Navbar = () => {
               Home
             </Link>
             <Link
-              href={"/home"}
+              href={"/about"}
               className={`${StylesNav.header__optionSeperator} `}
             >
               About
             </Link>
             <Link
-              href={"/home"}
+              href={"/resume"}
               className={`${StylesNav.header__optionSeperator} `}
             >
-              About
+              Resume
             </Link>
             <Link
-              href={"/home"}
+              href={"/project"}
               className={`${StylesNav.header__optionSeperator} `}
             >
-              About
+              Project
+            </Link>
+            <Link
+              href={"/contact"}
+              className={`${StylesNav.header__optionSeperator} `}
+            >
+              Contact
             </Link>
           </div>
         </div>

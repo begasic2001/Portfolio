@@ -42,25 +42,25 @@ const Resume = () => {
   const resumeBullets = [
     { label: "Education", logoSrc: "./education.svg" },
     { label: "Work History", logoSrc: "./work-history.svg" },
-    { label: "Programming Skills", logoSrc: "./programming-skills.svg" },
+    // { label: "Programming Skills", logoSrc: "./programming-skills.svg" },
     { label: "Projects", logoSrc: "./projects.svg" },
     { label: "Interests", logoSrc: "./interests.svg" },
   ];
 
-  const programmingSkillsDetails = [
-    { skill: "JavaScript", logoSkill: "" },
-    { skill: "JavaScript", logoSkill: "" },
-    { skill: "JavaScript", logoSkill: "" },
-    { skill: "JavaScript", logoSkill: "" },
-    { skill: "JavaScript", logoSkill: "" },
-    { skill: "JavaScript", logoSkill: "" },
-    { skill: "JavaScript", logoSkill: "" },
-  ];
+  // const programmingSkillsDetails = [
+  //   { skill: "C#", logoSkill: "" },
+  //   { skill: ".NET CORE", logoSkill: "" },
+  //   { skill: "TypeScript", logoSkill: "" },
+  //   { skill: "JavaScript", logoSkill: "" },
+  //   { skill: "ReactJS", logoSkill: "" },
+  //   { skill: "HTML", logoSkill: "" },
+  //   { skill: "CSS", logoSkill: "" },
+  // ];
 
   const projectDetails = [
     {
       title: "StudyAT",
-      duration: { fromDate: "2022", toDate: "2022" },
+      duration: { fromDate: "2022", toDate: "Present" },
       description: "A Personal Project",
       subHeading: "Technologies Used:",
     },
@@ -117,25 +117,25 @@ const Resume = () => {
         </span>
       </div>
     </div>,
-    <div
-      className={`${ResumeStyle.ResumeScreenContainer} ${ResumeStyle.ResumeProgrammingSkillContainer}`}
-      key={"Programming Skills"}
-    >
-      {programmingSkillsDetails.map((skill, index) => (
-        <div
-          className={`${ResumeStyle.ResumeProgrammingSkillContainer__SkillParent}`}
-          key={index}
-        >
-          <div
-            className={`${ResumeStyle.ResumeProgrammingSkillContainer__SkillParentBullet}`}
-          ></div>
-          <span>{skill.skill}</span>
-          <div className="skill-percentage">
-            <div className="active percentage"></div>
-          </div>
-        </div>
-      ))}
-    </div>,
+    // <div
+    //   className={`${ResumeStyle.ResumeScreenContainer} ${ResumeStyle.ResumeProgrammingSkillContainer}`}
+    //   key={"Programming Skills"}
+    // >
+    //   {programmingSkillsDetails.map((skill, index) => (
+    //     <div
+    //       className={`${ResumeStyle.ResumeProgrammingSkillContainer__SkillParent}`}
+    //       key={index}
+    //     >
+    //       <div
+    //         className={`${ResumeStyle.ResumeProgrammingSkillContainer__SkillParentBullet}`}
+    //       ></div>
+    //       <span>{skill.skill}</span>
+    //       <div className="skill-percentage">
+    //         <div className="active percentage"></div>
+    //       </div>
+    //     </div>
+    //   ))}
+    // </div>,
     <div className={`${ResumeStyle.ResumeScreenContainer}`} key={"Project"}>
       {projectDetails.map((project, index) => (
         <ResumeHeading
