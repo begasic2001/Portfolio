@@ -37,17 +37,16 @@ const Project = () => {
     <div>
       <ScreenHeading title="Project" subHeading="Personal Project" />
       <div className={`${ProjectStyle.ProjectSection}`}>
-        <Container >
+        <Container className={`${ProjectStyle.ContainerItem}`}>
           <Row>
             <OwlCarousel
-              className="owl-carousel"
+              // className="owl-carousel"
               id="testimonial-carousel"
               {...options}
             >
               <Col lg={12}>
                 <div className={`${ProjectStyle.ProjectItem}`}>
-                  <Image src="/bg-4.jpg" width={100} height={100} alt="" />
-
+                  <Image src="/bg-4.jpg" alt="" width={100} height={100} />
                   <p>Description project</p>
                 </div>
               </Col>
