@@ -1,7 +1,12 @@
 "use client";
-import ScreenHeading from "@/app/utils/ScreenHeading/ScreenHeading";
+import { faQuoteLeft, faQuoteRight } from "@fortawesome/free-solid-svg-icons";
+import ScreenHeading from "../../utils/ScreenHeading/ScreenHeading";
 import React from "react";
 import dynamic from "next/dynamic";
+var $ = require("jquery");
+if (typeof window !== "undefined") {
+  window.$ = window.jQuery = require("jquery");
+}
 const OwlCarousel = dynamic(() => import("react-owl-carousel"), {
   ssr: false,
 });
@@ -10,29 +15,29 @@ import "owl.carousel/dist/assets/owl.theme.default.css";
 import { Container, Row, Col } from "react-bootstrap";
 import Image from "next/image";
 import ProjectStyle from "../../styles/Project/Project.module.scss";
-const options = {
-  loop: true,
-  margin: 0,
-  nav: true,
-  animateIn: "bounceInRight",
-  animateOut: "bounceOutRight",
-  dots: true,
-  autoplay: true,
-  smartSpeed: 1000,
-  responsive: {
-    0: {
-      items: 1,
-    },
-    768: {
-      items: 1,
-    },
-    1000: {
-      items: 3,
-    },
-  },
-};
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Project = () => {
+  const options = {
+    loop: true,
+    margin: 0,
+    nav: true,
+    animateIn: "bounceInRight",
+    animateOut: "bounceOutRight",
+    dots: true,
+    smartSpeed: 1000,
+    responsive: {
+      0: {
+        items: 1,
+      },
+      768: {
+        items: 1,
+      },
+      1000: {
+        items: 3,
+      },
+    },
+  };
   return (
     <div>
       <ScreenHeading title="Project" subHeading="Personal Project" />
@@ -40,14 +45,25 @@ const Project = () => {
         <Container className={`${ProjectStyle.ContainerItem}`}>
           <Row>
             <OwlCarousel
-              // className="owl-carousel"
+             
               id="testimonial-carousel"
               {...options}
+              autoplay={true}
+              autoplaySpeed={1000}
+              autoplayTimeout={1000}
             >
               <Col lg={12}>
                 <div className={`${ProjectStyle.ProjectItem}`}>
-                  <Image src="/bg-4.jpg" alt="" width={100} height={100} />
+                  <img src="/bg-4.jpg" alt="" />
+                  <FontAwesomeIcon
+                    icon={faQuoteLeft}
+                    className={`${ProjectStyle.faQuoteLeft}`}
+                  />
                   <p>Description project</p>
+                  <FontAwesomeIcon
+                    icon={faQuoteRight}
+                    className={`${ProjectStyle.faQuoteRight}`}
+                  />
                 </div>
               </Col>
             </OwlCarousel>
