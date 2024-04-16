@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import ResumeStyle from "../../styles/Resume/Resume.module.scss";
 import ScreenHeading from "@/app/utils/ScreenHeading/ScreenHeading";
+import { Element } from "react-scroll";
 interface Props {
   heading: string;
   fromDate?: string;
@@ -199,20 +200,22 @@ const Resume = () => {
   return (
     <div className={`${ResumeStyle.Container} ${ResumeStyle.ScreenContainer}`}>
       <div className={`${ResumeStyle.ResumeContent}`}>
-        <ScreenHeading title="Resume" subHeading="My Formal Bio Details" />
-        <div className={`${ResumeStyle.ResumeCard}`}>
-          <div className={`${ResumeStyle.ResumeBullets}`}>
-            <div className={`${ResumeStyle.ResumeBulletContainer}`}>
-              <div className={`${ResumeStyle.ResumeBulletIcon}`}></div>
-              <div className={`${ResumeStyle.ResumeBulletList}`}>
-                {getBullets()}
+        <Element name="scroll-to-resume">
+          <ScreenHeading title="Resume" subHeading="My Formal Bio Details" />
+          <div className={`${ResumeStyle.ResumeCard}`}>
+            <div className={`${ResumeStyle.ResumeBullets}`}>
+              <div className={`${ResumeStyle.ResumeBulletContainer}`}>
+                <div className={`${ResumeStyle.ResumeBulletIcon}`}></div>
+                <div className={`${ResumeStyle.ResumeBulletList}`}>
+                  {getBullets()}
+                </div>
               </div>
             </div>
+            <div className={`${ResumeStyle.ResumeBulletDetails}`}>
+              {getResumeScreen()}
+            </div>
           </div>
-          <div className={`${ResumeStyle.ResumeBulletDetails}`}>
-            {getResumeScreen()}
-          </div>
-        </div>
+        </Element>
       </div>
     </div>
   );

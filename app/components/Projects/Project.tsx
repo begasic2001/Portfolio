@@ -16,6 +16,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import Image from "next/image";
 import ProjectStyle from "../../styles/Project/Project.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Element } from "react-scroll";
 
 const Project = () => {
   const options = {
@@ -39,41 +40,42 @@ const Project = () => {
     },
   };
   return (
-    <div>
+    <>
       <ScreenHeading title="Project" subHeading="Personal Project" />
       <div className={`${ProjectStyle.ProjectSection}`}>
-        <Container className={`${ProjectStyle.ContainerItem}`}>
-          <Row>
-            <OwlCarousel
-             
-              id="testimonial-carousel"
-              {...options}
-              autoplay={true}
-              autoplaySpeed={1000}
-              autoplayTimeout={1000}
-            >
-              <Col lg={12}>
-                <div className={`${ProjectStyle.ProjectItem}`}>
-                  <img src="/bg-4.jpg" alt="" />
-                  <FontAwesomeIcon
-                    icon={faQuoteLeft}
-                    className={`${ProjectStyle.faQuoteLeft}`}
-                  />
-                  <p>Description project</p>
-                  <FontAwesomeIcon
-                    icon={faQuoteRight}
-                    className={`${ProjectStyle.faQuoteRight}`}
-                  />
-                </div>
-              </Col>
-            </OwlCarousel>
-          </Row>
-        </Container>
+        <Element name="scroll-to-project">
+          <Container className={`${ProjectStyle.ContainerItem}`}>
+            <Row>
+              <OwlCarousel
+                id="testimonial-carousel"
+                {...options}
+                autoplay={true}
+                autoplaySpeed={1000}
+                autoplayTimeout={1000}
+              >
+                <Col lg={12}>
+                  <div className={`${ProjectStyle.ProjectItem}`}>
+                    <img src="/bg-4.jpg" alt="" />
+                    <FontAwesomeIcon
+                      icon={faQuoteLeft}
+                      className={`${ProjectStyle.faQuoteLeft}`}
+                    />
+                    <p>Description project</p>
+                    <FontAwesomeIcon
+                      icon={faQuoteRight}
+                      className={`${ProjectStyle.faQuoteRight}`}
+                    />
+                  </div>
+                </Col>
+              </OwlCarousel>
+            </Row>
+          </Container>
+        </Element>
       </div>
       <div className={`${ProjectStyle.FooterImage}`}>
         <img src="/wavefooterhero.png" alt="" />
       </div>
-    </div>
+    </>
   );
 };
 

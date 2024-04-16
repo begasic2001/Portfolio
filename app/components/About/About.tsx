@@ -1,6 +1,7 @@
 import React from "react";
 import AboutStyles from "../../styles/About/About.module.scss";
 import ScreenHeading from "@/app/utils/ScreenHeading/ScreenHeading";
+import { Element } from "react-scroll";
 
 const SCREEN_ABOUT = {
   description:
@@ -28,41 +29,47 @@ const renderHighlight = () => {
 
 const About = () => {
   return (
-    <div
-      className={`${AboutStyles.About__Container} ${AboutStyles.About__ScreenContainer}`}
-    >
-      <div className={`${AboutStyles.About__Parents}`}>
-        <ScreenHeading title="About Me" subHeading="Why Choose Me?" />
-        <div className={`${AboutStyles.About__Card}`}>
-          <div className={`${AboutStyles.About__CardProfile}`}></div>
-          <div className={`${AboutStyles.About__CardDetails}`}>
-            <span className={`${AboutStyles.About__CardDescription}`}>
-              {SCREEN_ABOUT.description}
-            </span>
-            <div className={`${AboutStyles.About__CardHighlights}`}>
-              <div className={`${AboutStyles.About__CardHighlightsHeading}`}>
-                <span>{SCREEN_ABOUT.hightlights.heading}</span>
+    <Element name="scroll-to-about">
+      <div
+        className={`${AboutStyles.About__Container} ${AboutStyles.About__ScreenContainer}`}
+      >
+        <div className={`${AboutStyles.About__Parents}`}>
+          <ScreenHeading title="About Me" subHeading="Why Choose Me?" />
+          <div className={`${AboutStyles.About__Card}`}>
+            <div className={`${AboutStyles.About__CardProfile}`}></div>
+            <div className={`${AboutStyles.About__CardDetails}`}>
+              <span className={`${AboutStyles.About__CardDescription}`}>
+                {SCREEN_ABOUT.description}
+              </span>
+              <div className={`${AboutStyles.About__CardHighlights}`}>
+                <div className={`${AboutStyles.About__CardHighlightsHeading}`}>
+                  <span>{SCREEN_ABOUT.hightlights.heading}</span>
+                </div>
+                {renderHighlight()}
               </div>
-              {renderHighlight()}
-            </div>
-            <div className={`${AboutStyles.About__CardOptions}`}>
-              <button className={`${AboutStyles.About__CardOptionsBtnHireMe}`}>
-                {""}
-                Hire Me{" "}
-              </button>
-              <a
-                href="CV_LuongMinhThanh_WebDeveloper.pdf"
-                download={"CV_LuongMinhThanh_WebDeveloper.pdf"}
-              >
-                <button className={`${AboutStyles.About__CardOptionsBtnGetCV}`}>
-                  Get CV
+              <div className={`${AboutStyles.About__CardOptions}`}>
+                <button
+                  className={`${AboutStyles.About__CardOptionsBtnHireMe}`}
+                >
+                  {""}
+                  Hire Me{" "}
                 </button>
-              </a>
+                <a
+                  href="CV_LuongMinhThanh_WebDeveloper.pdf"
+                  download={"CV_LuongMinhThanh_WebDeveloper.pdf"}
+                >
+                  <button
+                    className={`${AboutStyles.About__CardOptionsBtnGetCV}`}
+                  >
+                    Get CV
+                  </button>
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </Element>
   );
 };
 

@@ -2,9 +2,44 @@ import React, { useState } from "react";
 import StylesNav from "../styles/Profile/header.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
-import Link from "next/link";
+// import Link from "next/link";
+import { scroller, Link } from "react-scroll";
 const Navbar = () => {
   const [showHeaderOptions, setShowHeaderOptions] = useState<boolean>(false);
+
+  const [selectedNavbarIndex, setSelectedNavbarIndex] = useState<number>(0);
+  const scrollToAbout = (index:number) => {
+    index ==selectedNavbarIndex ? :
+    scroller.scrollTo("scroll-to-about", {
+      duration: 1000,
+      delay: 0,
+      smooth: "easeInOutQuart",
+    });
+  };
+  function scrollToResume(): void {
+    scroller.scrollTo("scroll-to-resume", {
+      duration: 1000,
+      delay: 0,
+      smooth: "easeInOutQuart",
+    });
+  }
+
+  function scrollToProject(): void {
+    scroller.scrollTo("scroll-to-project", {
+      duration: 1000,
+      delay: 0,
+      smooth: "easeInOutQuart",
+    });
+  }
+
+  function scrollToContact(): void {
+    scroller.scrollTo("scroll-to-contact", {
+      duration: 1000,
+      delay: 0,
+      smooth: "easeInOutQuart",
+    });
+  }
+
   return (
     <div>
       <div
@@ -33,32 +68,32 @@ const Navbar = () => {
             }
           >
             <Link
-              href={"/home"}
               className={`${StylesNav.header__optionSeperator} ${StylesNav.header__optionSeperatorActive}`}
             >
               Home
             </Link>
             <Link
-              href={"/about"}
+              // index == selectedNavbarIndex ? : 
               className={`${StylesNav.header__optionSeperator} `}
+              onClick={() => scrollToAbout(1)}
             >
               About
             </Link>
             <Link
-              href={"/resume"}
               className={`${StylesNav.header__optionSeperator} `}
+              onClick={() => scrollToResume()}
             >
               Resume
             </Link>
             <Link
-              href={"/project"}
               className={`${StylesNav.header__optionSeperator} `}
+              onClick={() => scrollToProject()}
             >
               Project
             </Link>
             <Link
-              href={"/contact"}
               className={`${StylesNav.header__optionSeperator} `}
+              onClick={() => scrollToContact()}
             >
               Contact
             </Link>
