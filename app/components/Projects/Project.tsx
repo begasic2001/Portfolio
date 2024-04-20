@@ -43,7 +43,7 @@ const Project = () => {
     <>
       <ScreenHeading title="Project" subHeading="Personal Project" />
       <div className={`${ProjectStyle.ProjectSection}`}>
-        <Element name="scroll-to-project">
+        <Element name="scroll-to-3">
           <Container className={`${ProjectStyle.ContainerItem}`}>
             <Row>
               <OwlCarousel

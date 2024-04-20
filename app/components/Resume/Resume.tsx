@@ -200,7 +200,7 @@ const Resume = () => {
   return (
     <div className={`${ResumeStyle.Container} ${ResumeStyle.ScreenContainer}`}>
       <div className={`${ResumeStyle.ResumeContent}`}>
-        <Element name="scroll-to-resume">
+        <Element name="scroll-to-2">
           <ScreenHeading title="Resume" subHeading="My Formal Bio Details" />
           <div className={`${ResumeStyle.ResumeCard}`}>
             <div className={`${ResumeStyle.ResumeBullets}`}>

@@ -29,7 +29,7 @@ const renderHighlight = () => {
 
 const About = () => {
   return (
-    <Element name="scroll-to-about">
+    <Element name="scroll-to-1">
       <div
         className={`${AboutStyles.About__Container} ${AboutStyles.About__ScreenContainer}`}
       >

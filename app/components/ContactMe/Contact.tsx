@@ -5,7 +5,7 @@ import { Element } from "react-scroll";
 
 const Contact = () => {
   return (
-    <Element name="scroll-to-contact">
+    <Element name="scroll-to-4">
       <div className={`${ContactStyle.Container}`}>
         <ScreenHeading title="Contact" subHeading="Lets Keep In Touch" />
         <form className={`${ContactStyle.baseForm}`}>
@@ -22,7 +22,7 @@ const Contact = () => {
             placeholder="Email"
           />
           <textarea
-            name="text"
+            name="comment"
             className={`${ContactStyle.textarea} ${ContactStyle.feedback_input}`}
             placeholder="Comment"
           ></textarea>

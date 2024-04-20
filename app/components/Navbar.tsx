@@ -2,43 +2,36 @@ import React, { useState } from "react";
 import StylesNav from "../styles/Profile/header.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
-// import Link from "next/link";
 import { scroller, Link } from "react-scroll";
 const Navbar = () => {
   const [showHeaderOptions, setShowHeaderOptions] = useState<boolean>(false);
-
+  //${StylesNav.header__optionSeperatorActive}
   const [selectedNavbarIndex, setSelectedNavbarIndex] = useState<number>(0);
-  const scrollToAbout = (index:number) => {
-    index ==selectedNavbarIndex ? :
-    scroller.scrollTo("scroll-to-about", {
+  const Links = [
+    {
+      label: "Home",
+    },
+    {
+      label: "About",
+    },
+    {
+      label: "Resume",
+    },
+    {
+      label: "Project",
+    },
+    {
+      label: "Contact",
+    },
+  ];
+  const scrollTo = (index: number) => {
+    scroller.scrollTo(`scroll-to-${index}`, {
       duration: 1000,
       delay: 0,
       smooth: "easeInOutQuart",
     });
+    setSelectedNavbarIndex(index);
   };
-  function scrollToResume(): void {
-    scroller.scrollTo("scroll-to-resume", {
-      duration: 1000,
-      delay: 0,
-      smooth: "easeInOutQuart",
-    });
-  }
-
-  function scrollToProject(): void {
-    scroller.scrollTo("scroll-to-project", {
-      duration: 1000,
-      delay: 0,
-      smooth: "easeInOutQuart",
-    });
-  }
-
-  function scrollToContact(): void {
-    scroller.scrollTo("scroll-to-contact", {
-      duration: 1000,
-      delay: 0,
-      smooth: "easeInOutQuart",
-    });
-  }
 
   return (
     <div>
@@ -67,15 +60,25 @@ const Navbar = () => {
                 : `${StylesNav.header__options}`
             }
           >
-            <Link
-              className={`${StylesNav.header__optionSeperator} ${StylesNav.header__optionSeperatorActive}`}
-            >
+            {Links.map((link, index) => (
+              <Link
+                className={
+                  index == selectedNavbarIndex
+                    ? `${StylesNav.header__optionSeperator} ${StylesNav.header__optionSeperatorActive}`
+                    : `${StylesNav.header__optionSeperator}`
+                }
+                onClick={() => scrollTo(index)}
+              >
+                {link.label}
+              </Link>
+            ))}
+            {/* <Link className={`${StylesNav.header__optionSeperator} `}>
               Home
             </Link>
             <Link
-              // index == selectedNavbarIndex ? : 
+              // index == selectedNavbarIndex ? :
               className={`${StylesNav.header__optionSeperator} `}
-              onClick={() => scrollToAbout(1)}
+              onClick={() => scrollToAbout()}
             >
               About
             </Link>
@@ -96,7 +99,7 @@ const Navbar = () => {
               onClick={() => scrollToContact()}
             >
               Contact
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>
