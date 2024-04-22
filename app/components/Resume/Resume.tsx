@@ -133,7 +133,10 @@ const Resume = () => {
       key={"Programming Skills"}
     >
       {programmingSkillsDetails.map((skill, index) => (
-        <div className={`${ResumeStyle.ResumeProgrammingSkillContainer__ImageSkill}`} key={index}>
+        <div
+          className={`${ResumeStyle.ResumeProgrammingSkillContainer__ImageSkill}`}
+          key={index}
+        >
           <Image
             src={`${skill.logoSkill}`}
             width={100}
@@ -174,6 +177,7 @@ const Resume = () => {
   const getBullets = () => {
     return resumeBullets.map((bullet, index) => (
       <div
+        key={index}
         onClick={() => handleCarousel(index)}
         className={
           index == selectedBulletIndex

@@ -28,10 +28,12 @@ export default function RootLayout({
         <script
           src="https://code.jquery.com/jquery-3.7.1.slim.js"
           integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc="
+          async 
         ></script>
         <script
           src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
           integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
+          async 
         ></script>
       </head>
       <body suppressHydrationWarning={true}>{children}</body>

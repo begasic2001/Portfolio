@@ -64,6 +64,7 @@ const Navbar = () => {
                     ? `${StylesNav.header__optionSeperator} ${StylesNav.header__optionSeperatorActive}`
                     : `${StylesNav.header__optionSeperator}`
                 }
+                key={index}
                 onClick={() => scrollTo(index)}
                 to=""
               >

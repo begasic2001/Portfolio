@@ -50,7 +50,7 @@ const Home = () => {
             <div className={`${StyleProfile.Home__ProfileDetailsName}`}>
               <span className={`${StyleProfile.Home__ProfilePrimaryText}`}>
                 {" "}
-                Hello, I'm{" "}
+                Hello, I&apos;m{" "}
                 <span className={`${StyleProfile.Home__ProfileHighlightText}`}>
                   Thanh
                 </span>
