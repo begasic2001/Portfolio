@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import ResumeStyle from "../../styles/Resume/Resume.module.scss";
 import ScreenHeading from "@/app/utils/ScreenHeading/ScreenHeading";
 import { Element } from "react-scroll";
+import Image from "next/image";
 interface Props {
   heading: string;
   fromDate?: string;
@@ -43,20 +44,28 @@ const Resume = () => {
   const resumeBullets = [
     { label: "Education", logoSrc: "./education.svg" },
     { label: "Work History", logoSrc: "./work-history.svg" },
-    // { label: "Programming Skills", logoSrc: "./programming-skills.svg" },
+    { label: "Skills", logoSrc: "./programming-skills.svg" },
     { label: "Projects", logoSrc: "./projects.svg" },
     { label: "Interests", logoSrc: "./interests.svg" },
   ];
 
-  // const programmingSkillsDetails = [
-  //   { skill: "C#", logoSkill: "" },
-  //   { skill: ".NET CORE", logoSkill: "" },
-  //   { skill: "TypeScript", logoSkill: "" },
-  //   { skill: "JavaScript", logoSkill: "" },
-  //   { skill: "ReactJS", logoSkill: "" },
-  //   { skill: "HTML", logoSkill: "" },
-  //   { skill: "CSS", logoSkill: "" },
-  // ];
+  const programmingSkillsDetails = [
+    { skill: "C#", logoSkill: "/CSharp.png" },
+    { skill: ".NET CORE", logoSkill: "/NETCORE.png" },
+    { skill: "TypeScript", logoSkill: "/typescript.png" },
+    { skill: "JavaScript", logoSkill: "/JavaScript.png" },
+    { skill: "ReactJS", logoSkill: "/reactjs.png" },
+    { skill: "NodeJS", logoSkill: "/nodejs.png" },
+    { skill: "NestJS", logoSkill: "/nestjs.png" },
+    { skill: "Sql Server", logoSkill: "/SQLServer.png" },
+    { skill: "MongoDB", logoSkill: "/mongo.png" },
+    { skill: "Docker", logoSkill: "/docker.png" },
+    { skill: "HTML", logoSkill: "/HTML5.png" },
+    { skill: "CSS", logoSkill: "/CSS.png" },
+    { skill: "Bootstrap", logoSkill: "/bootstraps.png" },
+    { skill: "MeterialUI", logoSkill: "/meterialui.png" },
+    { skill: "TaiwindCss", logoSkill: "/taiwindcss.png" },
+  ];
 
   const projectDetails = [
     {
@@ -118,25 +127,22 @@ const Resume = () => {
         </span>
       </div>
     </div>,
-    // <div
-    //   className={`${ResumeStyle.ResumeScreenContainer} ${ResumeStyle.ResumeProgrammingSkillContainer}`}
-    //   key={"Programming Skills"}
-    // >
-    //   {programmingSkillsDetails.map((skill, index) => (
-    //     <div
-    //       className={`${ResumeStyle.ResumeProgrammingSkillContainer__SkillParent}`}
-    //       key={index}
-    //     >
-    //       <div
-    //         className={`${ResumeStyle.ResumeProgrammingSkillContainer__SkillParentBullet}`}
-    //       ></div>
-    //       <span>{skill.skill}</span>
-    //       <div className="skill-percentage">
-    //         <div className="active percentage"></div>
-    //       </div>
-    //     </div>
-    //   ))}
-    // </div>,
+    // skill
+    <div
+      className={`${ResumeStyle.ResumeScreenContainer} ${ResumeStyle.ResumeProgrammingSkillContainer}`}
+      key={"Programming Skills"}
+    >
+      {programmingSkillsDetails.map((skill, index) => (
+        <div className={`${ResumeStyle.ResumeProgrammingSkillContainer__ImageSkill}`} key={index}>
+          <Image
+            src={`${skill.logoSkill}`}
+            width={100}
+            height={100}
+            alt={`skill ${skill.skill}`}
+          ></Image>
+        </div>
+      ))}
+    </div>,
     <div className={`${ResumeStyle.ResumeScreenContainer}`} key={"Project"}>
       {projectDetails.map((project, index) => (
         <ResumeHeading

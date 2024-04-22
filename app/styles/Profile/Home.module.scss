@@ -2,12 +2,22 @@
 
 .Home {
   &__ProfileContainer {
+    margin-top: 100px;
     display: flex;
     min-height: fit-content;
     align-items: center;
     justify-content: center;
     text-align: center;
     z-index: 0;
+    @include ipad_810 {
+      margin-top: 100px;
+    }
+    @include tablet {
+      margin-top: 100px;
+    }
+    @include phone__375 {
+      margin-top: 100px;
+    }
   }
   &__ProfileParent {
     display: flex;
@@ -48,7 +58,6 @@
     @include phone__375 {
       text-align: center;
     }
-  
   }
 
   &__ProfileHighlightText {
@@ -57,7 +66,6 @@
     @include phone__375 {
       text-align: center;
     }
-   
   }
   &__ProfileDetailRole {
     display: flex;

@@ -5,7 +5,6 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { scroller, Link } from "react-scroll";
 const Navbar = () => {
   const [showHeaderOptions, setShowHeaderOptions] = useState<boolean>(false);
-  //${StylesNav.header__optionSeperatorActive}
   const [selectedNavbarIndex, setSelectedNavbarIndex] = useState<number>(0);
   const Links = [
     {
@@ -35,10 +34,7 @@ const Navbar = () => {
 
   return (
     <div>
-      <div
-        className={StylesNav.header__container}
-        onClick={() => setShowHeaderOptions(!showHeaderOptions)}
-      >
+      <div className={StylesNav.header__container}>
         <div className={StylesNav.header__parent}>
           <div
             className={StylesNav.header__hamburger}
@@ -59,6 +55,7 @@ const Navbar = () => {
                 ? `${StylesNav.header__options} ${StylesNav.header__showhamburger}`
                 : `${StylesNav.header__options}`
             }
+            onClick={() => setShowHeaderOptions(!showHeaderOptions)}
           >
             {Links.map((link, index) => (
               <Link
@@ -68,38 +65,11 @@ const Navbar = () => {
                     : `${StylesNav.header__optionSeperator}`
                 }
                 onClick={() => scrollTo(index)}
+                to=""
               >
                 {link.label}
               </Link>
             ))}
-            {/* <Link className={`${StylesNav.header__optionSeperator} `}>
-              Home
-            </Link>
-            <Link
-              // index == selectedNavbarIndex ? :
-              className={`${StylesNav.header__optionSeperator} `}
-              onClick={() => scrollToAbout()}
-            >
-              About
-            </Link>
-            <Link
-              className={`${StylesNav.header__optionSeperator} `}
-              onClick={() => scrollToResume()}
-            >
-              Resume
-            </Link>
-            <Link
-              className={`${StylesNav.header__optionSeperator} `}
-              onClick={() => scrollToProject()}
-            >
-              Project
-            </Link>
-            <Link
-              className={`${StylesNav.header__optionSeperator} `}
-              onClick={() => scrollToContact()}
-            >
-              Contact
-            </Link> */}
           </div>
         </div>
       </div>

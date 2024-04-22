@@ -179,6 +179,14 @@ $DarkOrange: #ff5823;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    
+    &__ImageSkill{
+      width: calc((100% / 5));
+      
+      margin-bottom: 5px;
+      border-radius: 4px;
+      overflow: hidden;
+    }
   }
 
   /**/
