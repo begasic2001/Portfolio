@@ -1,0 +1,226 @@
+@import "../responsive";
+
+.Home {
+  &__ProfileContainer {
+    margin-top: 100px;
+    display: flex;
+    min-height: fit-content;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 0;
+    @include ipad_810 {
+      margin-top: 100px;
+    }
+    @include tablet {
+      margin-top: 100px;
+    }
+    @include phone__375 {
+      margin-top: 100px;
+    }
+  }
+  &__ProfileParent {
+    display: flex;
+    align-items: center;
+    color: aliceblue;
+    @include ipad_810 {
+      flex-direction: column-reverse;
+      margin: 40px 0 0 0;
+    }
+  }
+  &__ProfileLink {
+    color: white;
+    padding: 8px 8px 8px 0;
+    transition: all 0.75s ease-out;
+  }
+
+  &__ProfileLink:hover {
+    transform: scale(1.5);
+  }
+  &__ProfileDetailsName {
+    font-size: 24px;
+    @include tablet {
+      font-size: 20px;
+      text-align: center;
+    }
+    @include phone__375 {
+      width: 85%;
+      text-align: center;
+    }
+    @include ipad_810 {
+      margin: 25px 0 0 18px;
+      text-align: center;
+    }
+  }
+  &__ProfilePrimaryText {
+    font-size: 40px;
+    color: white;
+    @include phone__375 {
+      text-align: center;
+    }
+  }
+
+  &__ProfileHighlightText {
+    font-weight: 500;
+    color: #ff5823;
+    @include phone__375 {
+      text-align: center;
+    }
+  }
+  &__ProfileDetailRole {
+    display: flex;
+    flex-direction: column;
+    margin: 14px 0 24px 0;
+    @include tablet {
+      font-size: 12px;
+    }
+    @include ipad_810 {
+      text-align: center;
+    }
+  }
+
+  &__ProfileRoleTagline {
+    margin-top: 5px;
+    font-size: 19px;
+    font-weight: 300;
+  }
+
+  &__ProfileOptions {
+    @include ipad_810 {
+      display: flex;
+      justify-content: space-between;
+      margin: 0;
+      text-align: center;
+    }
+  }
+  &__ProfileBtnPrimary {
+    z-index: 700;
+    width: 160px;
+    border-radius: 50px;
+    border-width: 2px;
+    border-style: solid;
+    padding: 14px 0;
+    font-size: 14px;
+    background-color: #1f2235;
+    color: white;
+    @include tablet {
+      width: 120px;
+      padding: 11px 0;
+      z-index: 700;
+    }
+  }
+
+  &__ProfileBtnPrimary:hover {
+    border-width: 2px;
+    border-color: #ff5823;
+    color: aliceblue;
+  }
+
+  &__ProfileBtnSecondary {
+    margin-left: 28px;
+    width: 160px;
+    border-radius: 50px;
+    background-color: #ff5823;
+    padding: 14px 0;
+    font-size: 14px;
+    font-weight: 700;
+    color: white;
+    @include tablet {
+      width: 120px;
+      padding: 11px 0;
+      z-index: 700;
+    }
+  }
+
+  &__ProfileBtnSecondary:hover {
+    margin-left: 28px;
+    background-color: cornsilk;
+    color: #111;
+  }
+
+  &__ProfileAvatar {
+    margin: 0 0 0 100px;
+    display: flex;
+    height: 380px;
+    width: 380px;
+    align-self: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0px 1px 0px 0px rgb(255, 255, 255);
+    @include tablet {
+      margin: 0 0 0 80px;
+    }
+    @include ipad_898 {
+      height: 320px;
+      width: 320px;
+      margin: 0 0 0 4px;
+    }
+    @include ipad_810 {
+      margin: 0;
+    }
+    @include phone__375 {
+      height: 275px;
+      width: 275px;
+      margin-top: -90px;
+    }
+    &__Main {
+      height: 95%;
+      width: 95%;
+      border-radius: 50%;
+      background-image: url("/bg-4.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    &__Main:hover {
+      transform: scale(1.07);
+      transition: all 1s ease-out;
+    }
+  }
+
+  &__Footer {
+    &Container {
+      height: 17.8%;
+      width: 100%;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+    }
+
+    &Parent {
+      width: 100%;
+      height: 100%;
+      max-width: 1920px;
+    }
+
+    &Parent img {
+      width: 100%;
+      max-width: 100%;
+      height: 130px;
+      background-size: cover;
+    }
+  }
+}
+
+.robotoregular {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@media only screen and (max-width: 1023px) {
+  .Home {
+    // &__ProfileBtnPrimary {
+    //   width: 120px;
+    //   padding: 0 11px;
+    // }
+
+    &__Footer {
+      &Parent img {
+        display: flex;
+        align-items: flex-end;
+      }
+    }
+  }
+}

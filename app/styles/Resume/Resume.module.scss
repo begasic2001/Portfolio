@@ -1,0 +1,201 @@
+@import "../responsive";
+$IconColor: #1f2235;
+$DarkOrange: #ff5823;
+.Container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  min-height: fit-content;
+  margin: 120px 0;
+}
+
+.ResumeCard {
+  display: flex;
+  height: 360px;
+  width: 1000px;
+
+  @include tablet {
+    width: 880px;
+  }
+
+  @include tablet_1023 {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0;
+    align-items: center;
+    width: 90%;
+  }
+}
+
+.ResumeBullets {
+  height: 100%;
+  box-shadow: 15px 0 9px -15px #1f2235;
+  width: 320px;
+}
+
+.ResumeBulletDetails {
+  flex-grow: 1;
+  width: 700px;
+  overflow: hidden;
+  padding: 0 0 0 70px;
+  @include tablet {
+    padding: 0 0 0 70px;
+  }
+
+  @include tablet_1023 {
+    padding: 0;
+    height: 360px;
+    width: fit-content;
+  }
+}
+.ResumeScreenExperienceDescription {
+  margin: 10px 0 0 0;
+  text-align: justify;
+  max-width: 100%;
+}
+
+.ResumeDetailsCarousel {
+  transition: transform 1s ease-out;
+}
+
+.ResumeBullet {
+  @include tablet_1023 {
+    width: 100%;
+  }
+}
+
+.ResumeBulletList {
+  @include tablet_1023 {
+    width: 90%;
+  }
+}
+
+
+.Resume {
+  &BulletContainer {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    position: relative;
+  }
+
+  &BulletList {
+    width: 80%;
+    position: relative;
+    z-index: 2;
+  }
+
+  &Bullet {
+    display: flex;
+    align-items: center;
+    background-color: $IconColor;
+    height: 40px;
+    margin: 15px 0;
+    padding: 0 8px;
+    border-radius: 20px;
+    width: 30px;
+    transition: width 0.6s ease;
+    cursor: pointer;
+
+    &Label {
+      margin-left: 20px;
+      font-size: 14px;
+      white-space: nowrap;
+      font-family: "Roboto", sans-serif;
+      font-weight: 900;
+      font-style: normal;
+    }
+    &Logo {
+      height: 16px;
+      margin: 0 30px 0 0;
+    }
+    &Icon {
+      width: 34px;
+      height: 100%;
+      z-index: 1;
+      background-color: $IconColor;
+      position: absolute;
+    }
+
+    &Selected {
+      color: white;
+      width: 100%;
+
+      @include tablet_1023 {
+        width: 100%;
+      }
+    }
+  }
+
+  &ScreenContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 360px;
+    width: 100%;
+  }
+
+  /*Style for resume details 5 icon sidebar*/
+  &Heading {
+    display: flex;
+    flex-direction: column;
+    &Bullet {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+    }
+    &Bullet::before {
+      content: "";
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      background-color: $DarkOrange;
+      left: -30px;
+      top: 5px;
+      border-radius: 50%;
+    }
+
+    &Description {
+      font-size: 12px;
+      text-align: justify;
+    }
+    &Date {
+      background-color: $DarkOrange;
+      padding: 4px 12px;
+      font-size: 14px;
+      border-radius: 14px;
+      color: white;
+    }
+  }
+  /*end style for resume details */
+
+  /*Style for skills*/
+  &ProgrammingSkillContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+    &__ImageSkill{
+      width: calc((100% / 5));
+      
+      margin-bottom: 5px;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+  }
+
+  /**/
+  &Content {
+    @include tablet_1023 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
+

@@ -1,0 +1,68 @@
+.ProjectSection {
+  padding: 80px 0 80px;
+  background-image: url("/bg-1.jpg");
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.ProjectSection::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.85;
+  background-color: #1f2235;
+}
+
+.ContainerItem{
+  margin: 0 auto;
+}
+
+.ProjectSection .ProjectItem {
+  background-color: white;
+  padding: 30px;
+  border-radius: 50px 50px 50px 0px;
+  width: 400px;
+  height: 400px;
+  margin-left: 10px;
+  p {
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 400;
+    margin: 0 0 10px;
+    font-style: italic;
+  }
+  img {
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+    margin: 0 auto;
+  }
+}
+
+.FooterImage {
+  width: 100%;
+  height: 100%;
+  max-width: 1920px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  margin-top: -110px;
+}
+.FooterImage img {
+  width: 100%;
+  height: 130px;
+}
+
+.faQuoteLeft {
+  margin-right: 5px;
+  color: tomato;
+}
+
+.faQuoteRight {
+  margin-left: 5px;
+  color: tomato;
+}

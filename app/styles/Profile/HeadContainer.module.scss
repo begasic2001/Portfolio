@@ -1,0 +1,11 @@
+.Main{
+  &__Container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 670px;
+    background-image: url("/backgroundhero.png");
+    background-size: cover;
+    background-position: center;
+  }
+}
