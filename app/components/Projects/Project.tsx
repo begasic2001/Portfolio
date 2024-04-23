@@ -3,7 +3,6 @@ import { faQuoteLeft, faQuoteRight } from "@fortawesome/free-solid-svg-icons";
 import ScreenHeading from "../../utils/ScreenHeading/ScreenHeading";
 import React, { useEffect } from "react";
 import dynamic from "next/dynamic";
-import $ from "jquery";
 const OwlCarousel = dynamic(() => import("react-owl-carousel"), {
   ssr: false,
 });
@@ -14,13 +13,10 @@ import Image from "next/image";
 import ProjectStyle from "../../styles/Project/Project.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Element } from "react-scroll";
-// if (typeof window !== "undefined") {
-//   window.$ = window.jQuery = require("jquery");
-// }
+
 const Project = () => {
   useEffect(() => {
     if (typeof window !== "undefined") {
-      // window.$ = window.jQuery = require("jquery");
       return;
     }
   }, []);
