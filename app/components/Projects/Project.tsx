@@ -20,7 +20,8 @@ import { Element } from "react-scroll";
 const Project = () => {
   useEffect(() => {
     if (typeof window !== "undefined") {
-      window.$ = window.jQuery = require("jquery");
+      // window.$ = window.jQuery = require("jquery");
+      return;
     }
   }, []);
   const options = {
