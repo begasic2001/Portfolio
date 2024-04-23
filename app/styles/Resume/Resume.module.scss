@@ -72,7 +72,6 @@ $DarkOrange: #ff5823;
   }
 }
 
-
 .Resume {
   &BulletContainer {
     display: flex;
@@ -176,16 +175,19 @@ $DarkOrange: #ff5823;
   &ProgrammingSkillContainer {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
+    // justify-content: space-evenly;
     flex-wrap: wrap;
-    
-    &__ImageSkill{
-      width: calc((100% / 6));
-      
+    margin: 1px 0 0 -5px;
+    &__ImageSkill {
+      width: calc((100% / 6) - 5px);
+      margin-left: 5px;
       margin-bottom: 5px;
       border-radius: 4px;
       overflow: hidden;
+      img {
+        object-fit: cover;
+      }
     }
   }
 
@@ -198,4 +200,3 @@ $DarkOrange: #ff5823;
     }
   }
 }
-
